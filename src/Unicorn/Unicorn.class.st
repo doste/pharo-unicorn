@@ -249,6 +249,8 @@ Unicorn >> ffiLibrary [
 { #category : #finalization }
 Unicorn >> finalize [
 
+	self isNull ifTrue: [ ^ self ].
+	
 	^ self close
 ]
 
