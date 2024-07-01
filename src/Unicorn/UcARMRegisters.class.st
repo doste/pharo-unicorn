@@ -2,8 +2,8 @@
 I define ARM 32bits register constants.
 "
 Class {
-	#name : #UcARMRegisters,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'UcARMRegisters',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'UC_ARM_REG_APSR',
 		'UC_ARM_REG_APSR_NZCV',
@@ -132,95 +132,96 @@ Class {
 		'UC_ARM_REG_SP',
 		'UC_ARM_REG_SPSR'
 	],
-	#category : #Unicorn
+	#category : 'Unicorn',
+	#package : 'Unicorn'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> d0 [
 	^ UC_ARM_REG_D0
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> d1 [
 	^ UC_ARM_REG_D1
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> d10 [
 	^ UC_ARM_REG_D10
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> d11 [
 	^ UC_ARM_REG_D11
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> d12 [
 	^ UC_ARM_REG_D12
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> d13 [
 	^ UC_ARM_REG_D13
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> d14 [
 	^ UC_ARM_REG_D14
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> d15 [
 	^ UC_ARM_REG_D15
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> d2 [
 	^ UC_ARM_REG_D2
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> d3 [
 	^ UC_ARM_REG_D3
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> d4 [
 	^ UC_ARM_REG_D4
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> d5 [
 	^ UC_ARM_REG_D5
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> d6 [
 	^ UC_ARM_REG_D6
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> d7 [
 	^ UC_ARM_REG_D7
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> d8 [
 	^ UC_ARM_REG_D8
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> d9 [
 	^ UC_ARM_REG_D9
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> eflags [
 	^ UC_ARM_REG_EFLAGS
 ]
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 UcARMRegisters class >> enumDecl [
 "self initialize to make the changes effective"
 	^ #(
@@ -353,104 +354,104 @@ UcARMRegisters class >> enumDecl [
 	)
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> fp [
 	^ UC_ARM_REG_FP
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcARMRegisters class >> fpexc [
 	
 	^ UC_ARM_REG_FPEXC
 ]
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 UcARMRegisters class >> initialize [
 	self initializeEnumeration
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> lr [
 	^ UC_ARM_REG_LR
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> pc [
 	^ UC_ARM_REG_PC
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> r0 [
 	^ UC_ARM_REG_R0
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> r1 [
 	^ UC_ARM_REG_R1
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> r10 [
 	^ UC_ARM_REG_R10
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> r11 [
 	
 	^ UC_ARM_REG_R11
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> r12 [
 	^ UC_ARM_REG_R12
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> r2 [
 	^ UC_ARM_REG_R2
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> r3 [
 	^ UC_ARM_REG_R3
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> r4 [
 	^ UC_ARM_REG_R4
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> r5 [
 	^ UC_ARM_REG_R5
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> r6 [
 	^ UC_ARM_REG_R6
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> r7 [
 	^ UC_ARM_REG_R7
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> r8 [
 	^ UC_ARM_REG_R8
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> r9 [
 	^ UC_ARM_REG_R9
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> sl [
 	^ UC_ARM_REG_SL
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARMRegisters class >> sp [
 	^ UC_ARM_REG_SP
 ]

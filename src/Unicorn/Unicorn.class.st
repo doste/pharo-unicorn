@@ -64,8 +64,8 @@ Registers are represented by ids in the different *Registers enumerations (see f
 A single method (#startAt:until:timeout:count:) allows to start the execution of a memory at a location. Three different stop conditions can be set: a final address, a timeout in microseconds or a number of instructions to execute.
 "
 Class {
-	#name : #Unicorn,
-	#superclass : #FFIExternalObject,
+	#name : 'Unicorn',
+	#superclass : 'FFIExternalObject',
 	#instVars : [
 		'hooks',
 		'runtimeError'
@@ -74,10 +74,11 @@ Class {
 		'UnicornConstants',
 		'UnicornTypes'
 	],
-	#category : #Unicorn
+	#category : 'Unicorn',
+	#package : 'Unicorn'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 Unicorn class >> architecture: architecture mode: mode [
 
 	| return enginePointer |
@@ -91,65 +92,65 @@ Unicorn class >> architecture: architecture mode: mode [
 	^ self fromHandle: enginePointer
 ]
 
-{ #category : #'instance-creation' }
+{ #category : 'instance-creation' }
 Unicorn class >> arm [
 
 	"Returns a unicorn for instructions in A32 encoding"
 	^ self architecture: UC_ARCH_ARM mode: UC_MODE_ARM
 ]
 
-{ #category : #'instance-creation' }
+{ #category : 'instance-creation' }
 Unicorn class >> arm64 [
 
 	"Returns a unicorn for instructions in A64 encoding"
 	^ self architecture: UC_ARCH_ARM64 mode: UC_MODE_ARM
 ]
 
-{ #category : #resources }
+{ #category : 'resources' }
 Unicorn class >> ffiLibrary [
 
 	^ UnicornLibrary
 ]
 
-{ #category : #'instance-creation' }
+{ #category : 'instance-creation' }
 Unicorn class >> riscv32 [
 
 	"Returns a unicorn for instructions in A64 encoding"
 	^ self architecture: UC_ARCH_RISCV mode: UC_MODE_RISCV32
 ]
 
-{ #category : #'instance-creation' }
+{ #category : 'instance-creation' }
 Unicorn class >> riscv64 [
 
 	"Returns a unicorn for instructions in A64 encoding"
 	^ self architecture: UC_ARCH_RISCV mode: UC_MODE_RISCV64
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn class >> uc_open: architecture mode: mode enginePointer: enginePointer [
 	
 	self ffiCall: #(UC_err uc_open(UC_arch architecture,UC_mode mode,void** enginePointer))
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn class >> uc_strerror: anErrorCode [
 	
 	self ffiCall: #(String uc_strerror(UC_err anErrorCode))
 ]
 
-{ #category : #'instance-creation' }
+{ #category : 'instance-creation' }
 Unicorn class >> x86 [
 
 	^ self architecture: UC_ARCH_X86 mode: UC_MODE_32
 ]
 
-{ #category : #'instance-creation' }
+{ #category : 'instance-creation' }
 Unicorn class >> x8664 [
 
 	^ self architecture: UC_ARCH_X86 mode: UC_MODE_64
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn >> addHookOfType: type withCallback: callback forHandle: hookHandle [
 
 	self ffiCall: #(UC_err uc_hook_add(
@@ -157,12 +158,12 @@ Unicorn >> addHookOfType: type withCallback: callback forHandle: hookHandle [
 		void *hookHandle,
 		int type,
 		FFICallback callback,
-		NULL,
+		void* 0,
 		uint64 1,
 		uint64 0))
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn >> changeCPUModel: model [
 
 	| type result | 
@@ -176,13 +177,13 @@ Unicorn >> changeCPUModel: model [
 	
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn >> close [
 
 	self ffiCall: #(UC_err uc_close(self))
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn >> doChangeCPUModel: model withControlType: type [
 
 	^ self ffiCall: #(UC_err uc_ctl(self, uint64 type, uint64 model)) fixedArgumentCount: 2
@@ -190,43 +191,43 @@ Unicorn >> doChangeCPUModel: model withControlType: type [
 	
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn >> doMapHostMemory: aMemory ofSize: size atAddress: address withPermissions: permissions [
 
 	self ffiCall: #(UC_err uc_mem_map_ptr(self, uint64 address, size_t size, uint32 permissions, void *aMemory))
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn >> doMapMemoryOfSize: size atAddress: address withPermissions: perms [
 
 	self ffiCall: #(UC_err uc_mem_map(self, uint64 address, size_t size, uint32 perms)) module: UnicornLibrary
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn >> doMemoryAt: address write: bytes size: size [
 
 	^ self ffiCall: #(UC_err uc_mem_write(self, uint64 address, const void *bytes, size_t size)) module: UnicornLibrary
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn >> doMemoryReadBytes: size atAddress: address inBuffer: bytes [
 
 	self ffiCall: #(UC_err uc_mem_read(self, uint64 address, void *bytes, size_t size))
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn >> doMemorySetFrom: address to: size with: bytes [ 
 
 	self ffiCall: #(UC_err uc_mem_write(self, uint64 address, const void *bytes, size_t size))
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn >> doQuery: type intoHolder: result [
 
 	self ffiCall: #(UC_err uc_query(self, uint32 type, void *result))
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn >> doRemoveInstructionCacheFrom: address to: end withControlType: type [
 
 	^ self ffiCall: #(UC_err uc_ctl(self, uint64 type, uint64 address, uint64 end)) fixedArgumentCount: 2
@@ -234,19 +235,19 @@ Unicorn >> doRemoveInstructionCacheFrom: address to: end withControlType: type [
 	
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn >> doStartAt: begin until: until timeout: timeout count: count [ 
 
 	self ffiCall: #(UC_err uc_emu_start(self, uint64 begin, uint64 until, uint64 timeout, size_t count))
 ]
 
-{ #category : #resources }
+{ #category : 'resources' }
 Unicorn >> ffiLibrary [
 
 	^ UnicornLibrary
 ]
 
-{ #category : #finalization }
+{ #category : 'finalization' }
 Unicorn >> finalize [
 
 	self isNull ifTrue: [ ^ self ].
@@ -254,44 +255,44 @@ Unicorn >> finalize [
 	^ self close
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn >> free [
 
 	self ffiCall: #(UC_err uc_free(self))
 ]
 
-{ #category : #hooks }
+{ #category : 'hooks' }
 Unicorn >> hooks [
 	
 	^ hooks ifNil: [ hooks := OrderedCollection new ]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 Unicorn >> initialize [
 
 	super initialize.
-	WeakRegistry default add: self
+	FinalizationRegistry default add: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Unicorn >> lastExecutedInstructionAddress [
 
 	^ self query: UC_QUERY_LAST_INSTR_ADDRESS
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Unicorn >> lastExecutedInstructionSize [
 	
 	^ self query: UC_QUERY_LAST_INSTR_SIZE
 ]
 
-{ #category : #errors }
+{ #category : 'errors' }
 Unicorn >> lastInstructionCount [
 
 	^ self query: UC_QUERY_INSTR_COUNT
 ]
 
-{ #category : #'memory-mapping' }
+{ #category : 'memory-mapping' }
 Unicorn >> mapHostMemory: aMemory atAddress: address withPermissions: permissions [
 
 	"This address must be aligned to 4KB, or this will return with UC_ERR_ARG error"
@@ -314,7 +315,7 @@ Unicorn >> mapHostMemory: aMemory atAddress: address withPermissions: permission
 	self verifyErrorCode: errorCode
 ]
 
-{ #category : #'memory-mapping' }
+{ #category : 'memory-mapping' }
 Unicorn >> mapMemoryOfSize: size atAddress: address withPermissions: perms [
 
 	| result |
@@ -323,7 +324,7 @@ Unicorn >> mapMemoryOfSize: size atAddress: address withPermissions: perms [
 	^ result
 ]
 
-{ #category : #'memory-read/write' }
+{ #category : 'memory-read/write' }
 Unicorn >> memoryAt: address readNext: byteSize [
 	
 	| buffer result |
@@ -333,7 +334,7 @@ Unicorn >> memoryAt: address readNext: byteSize [
 	^ buffer.
 ]
 
-{ #category : #'memory-read/write' }
+{ #category : 'memory-read/write' }
 Unicorn >> memoryAt: address until: size setTo: bytes [ 
 
 	| result |
@@ -342,13 +343,13 @@ Unicorn >> memoryAt: address until: size setTo: bytes [
 	^ result
 ]
 
-{ #category : #'memory-read/write' }
+{ #category : 'memory-read/write' }
 Unicorn >> memoryAt: address write: bytes [
 
 	^ self memoryAt: address write: bytes size: bytes size
 ]
 
-{ #category : #'memory-read/write' }
+{ #category : 'memory-read/write' }
 Unicorn >> memoryAt: address write: bytes size: size [
 
 	| result |
@@ -357,7 +358,7 @@ Unicorn >> memoryAt: address write: bytes size: size [
 	^ result
 ]
 
-{ #category : #errors }
+{ #category : 'errors' }
 Unicorn >> query: type [
 
 	| holder result |
@@ -370,7 +371,7 @@ Unicorn >> query: type [
 	^ holder integerAt: 1 size: Smalltalk wordSize signed: true. 
 ]
 
-{ #category : #'register-read/write' }
+{ #category : 'register-read/write' }
 Unicorn >> readRegisterId: aRegisterId size: aSize [
 
 	| buffer |
@@ -379,25 +380,25 @@ Unicorn >> readRegisterId: aRegisterId size: aSize [
 	^ buffer
 ]
 
-{ #category : #'register-read/write' }
+{ #category : 'register-read/write' }
 Unicorn >> register: regid readInto: value [
 
 	self ffiCall: #(UC_err uc_reg_read(self, int regid, void *value))
 ]
 
-{ #category : #'register-read/write' }
+{ #category : 'register-read/write' }
 Unicorn >> register: regid write: value [
 
 	self ffiCall: #(UC_err uc_reg_write(self, int regid, void *value))
 ]
 
-{ #category : #hooks }
+{ #category : 'hooks' }
 Unicorn >> registerHook: anUcHook [ 
 
 	self hooks add: anUcHook
 ]
 
-{ #category : #hooks }
+{ #category : 'hooks' }
 Unicorn >> registerInvalidMemoryAccessHook: hookType doing: aBlock [
 
 	| callback hookHandle hook returnCode |
@@ -426,7 +427,7 @@ Unicorn >> registerInvalidMemoryAccessHook: hookType doing: aBlock [
 	^ hook
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn >> removeInstructionCacheFrom: address to: end [
 
 	| type result | 
@@ -440,7 +441,7 @@ Unicorn >> removeInstructionCacheFrom: address to: end [
 	
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 Unicorn >> startAt: begin until: until timeout: timeout count: count [ 
 
 	| result |
@@ -453,25 +454,25 @@ Unicorn >> startAt: begin until: until timeout: timeout count: count [
 	^ result
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn >> stop [
 	"Stop emulation. Typically called from a callback"
 	self ffiCall: #(UC_err uc_emu_stop(self))
 ]
 
-{ #category : #errors }
+{ #category : 'errors' }
 Unicorn >> stringOfErrorCode: code [
 
 	^ self ffiCall: #(const char *uc_strerror(int code))
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 Unicorn >> unmapMemoryAt: address size: size [
 
 	self ffiCall: #(UC_err uc_mem_unmap(self, uint64 address, size_t size))
 ]
 
-{ #category : #errors }
+{ #category : 'errors' }
 Unicorn >> verifyErrorCode: anInteger [ 
 
 	(UnicornConstants isOk: anInteger) ifTrue: [ ^ self ].

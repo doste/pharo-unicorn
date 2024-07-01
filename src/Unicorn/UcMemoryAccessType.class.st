@@ -1,6 +1,6 @@
 Class {
-	#name : #UcMemoryAccessType,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'UcMemoryAccessType',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'UC_MEM_FETCH',
 		'UC_MEM_FETCH_PROT',
@@ -13,70 +13,71 @@ Class {
 		'UC_MEM_WRITE_PROT',
 		'UC_MEM_WRITE_UNMAPPED'
 	],
-	#category : #Unicorn
+	#category : 'Unicorn',
+	#package : 'Unicorn'
 }
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 UcMemoryAccessType class >> UC_MEM_FETCH [
 	"This method was automatically generated"
 	^ UC_MEM_FETCH
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 UcMemoryAccessType class >> UC_MEM_FETCH_PROT [
 	"This method was automatically generated"
 	^ UC_MEM_FETCH_PROT
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 UcMemoryAccessType class >> UC_MEM_FETCH_UNMAPPED [
 	"This method was automatically generated"
 	^ UC_MEM_FETCH_UNMAPPED
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 UcMemoryAccessType class >> UC_MEM_READ [
 	"This method was automatically generated"
 	^ UC_MEM_READ
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 UcMemoryAccessType class >> UC_MEM_READ_AFTER [
 	"This method was automatically generated"
 	^ UC_MEM_READ_AFTER
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 UcMemoryAccessType class >> UC_MEM_READ_PROT [
 	"This method was automatically generated"
 	^ UC_MEM_READ_PROT
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 UcMemoryAccessType class >> UC_MEM_READ_UNMAPPED [
 	"This method was automatically generated"
 	^ UC_MEM_READ_UNMAPPED
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 UcMemoryAccessType class >> UC_MEM_WRITE [
 	"This method was automatically generated"
 	^ UC_MEM_WRITE
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 UcMemoryAccessType class >> UC_MEM_WRITE_PROT [
 	"This method was automatically generated"
 	^ UC_MEM_WRITE_PROT
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 UcMemoryAccessType class >> UC_MEM_WRITE_UNMAPPED [
 	"This method was automatically generated"
 	^ UC_MEM_WRITE_UNMAPPED
 ]
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 UcMemoryAccessType class >> enumDecl [
 
 	^ #(
@@ -93,7 +94,7 @@ UcMemoryAccessType class >> enumDecl [
 	)
 ]
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 UcMemoryAccessType class >> initialize [
 	self initializeEnumeration
 ]

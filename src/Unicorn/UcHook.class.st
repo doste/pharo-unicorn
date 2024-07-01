@@ -1,25 +1,26 @@
 Class {
-	#name : #UcHook,
-	#superclass : #Object,
+	#name : 'UcHook',
+	#superclass : 'Object',
 	#instVars : [
 		'handle',
 		'callback',
 		'type'
 	],
-	#category : #Unicorn
+	#category : 'Unicorn',
+	#package : 'Unicorn'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcHook >> callback: aFFICallback [ 
 	callback := aFFICallback
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcHook >> handle: aCollection [ 
 	handle := aCollection
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcHook >> type: anUcHookType [ 
 	type := anUcHookType
 ]

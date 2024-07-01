@@ -1,6 +1,6 @@
 Class {
-	#name : #UcRISCVRegisters,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'UcRISCVRegisters',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'UC_RISCV_REG_CYCLE',
 		'UC_RISCV_REG_CYCLEH',
@@ -195,40 +195,41 @@ Class {
 		'UC_RISCV_REG_X8',
 		'UC_RISCV_REG_X9'
 	],
-	#category : #Unicorn
+	#category : 'Unicorn',
+	#package : 'Unicorn'
 }
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> a0 [
 
 	^ UC_RISCV_REG_X10
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> a1 [
 
 	^ UC_RISCV_REG_X11
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> a2 [
 
 	^ UC_RISCV_REG_X12
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> a3 [
 
 	^ UC_RISCV_REG_X13
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> a4 [
 
 	^ UC_RISCV_REG_X14
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 UcRISCVRegisters class >> enumDecl [ 
 
 	"self initialize to make the changes effective"
@@ -434,487 +435,487 @@ UcRISCVRegisters class >> enumDecl [
 	)
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f0 [
 
 	^ UC_RISCV_REG_F0
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f1 [
 
 	^ UC_RISCV_REG_F1
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f10 [
 
 	^ UC_RISCV_REG_F10
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f11 [
 
 	^ UC_RISCV_REG_F11
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f12 [
 
 	^ UC_RISCV_REG_F12
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f13 [
 
 	^ UC_RISCV_REG_F13
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f14 [
 
 	^ UC_RISCV_REG_F14
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f15 [
 
 	^ UC_RISCV_REG_F15
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f16 [
 
 	^ UC_RISCV_REG_F16
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f17 [
 
 	^ UC_RISCV_REG_F17
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f18 [
 
 	^ UC_RISCV_REG_F18
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f19 [
 
 	^ UC_RISCV_REG_F19
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f2 [
 
 	^ UC_RISCV_REG_F2
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f20 [
 
 	^ UC_RISCV_REG_F20
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f21 [
 
 	^ UC_RISCV_REG_F21
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f22 [
 
 	^ UC_RISCV_REG_F22
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f23 [
 
 	^ UC_RISCV_REG_F23
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f24 [
 
 	^ UC_RISCV_REG_F24
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f25 [
 
 	^ UC_RISCV_REG_F25
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f26 [
 
 	^ UC_RISCV_REG_F26
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f27 [
 
 	^ UC_RISCV_REG_F27
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f28 [
 
 	^ UC_RISCV_REG_F28
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f29 [
 
 	^ UC_RISCV_REG_F29
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f3 [
 
 	^ UC_RISCV_REG_F3
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f30 [
 
 	^ UC_RISCV_REG_F30
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f31 [
 
 	^ UC_RISCV_REG_F31
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f4 [
 
 	^ UC_RISCV_REG_F4
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f5 [
 
 	^ UC_RISCV_REG_F5
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f6 [
 
 	^ UC_RISCV_REG_F6
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f7 [
 
 	^ UC_RISCV_REG_F7
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f8 [
 
 	^ UC_RISCV_REG_F8
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> f9 [
 
 	^ UC_RISCV_REG_F9
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 UcRISCVRegisters class >> initialize [ 
 
 	self initializeEnumeration
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> mstatus [
 
 	^ UC_RISCV_REG_MSTATUS
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> pc [
 
 	^ UC_RISCV_REG_PC
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> s0 [
 
 	^ UC_RISCV_REG_X8
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> s1 [
 
 	^ UC_RISCV_REG_X9
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> s2 [
 
 	^ UC_RISCV_REG_X18
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> s6 [
 
 	^ UC_RISCV_REG_X22
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> s7 [
 
 	^ UC_RISCV_REG_X23
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> s8 [
 
 	^ UC_RISCV_REG_X24
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> s9 [ 
 
 	^ UC_RISCV_REG_X25
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> t0 [
 
 	^ UC_RISCV_REG_X5
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> t1 [
 
 	^ UC_RISCV_REG_X6
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> t2 [
 
 	^ UC_RISCV_REG_X7
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> t3 [
 
 	^ UC_RISCV_REG_X28
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> t4 [
 
 	^ UC_RISCV_REG_X29
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> t5 [
 
 	^ UC_RISCV_REG_X30
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> t6 [
 
 	^ UC_RISCV_REG_X31
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x0 [
 
 	^ UC_RISCV_REG_X0
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x1 [
 
 	^ UC_RISCV_REG_X1
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x10 [
 
 	^ UC_RISCV_REG_X10
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x11 [
 
 	^ UC_RISCV_REG_X11
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x12 [
 
 	^ UC_RISCV_REG_X12
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x13 [
 
 	^ UC_RISCV_REG_X13
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x14 [
 
 	^ UC_RISCV_REG_X14
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x15 [
 
 	^ UC_RISCV_REG_X15
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x16 [
 
 	^ UC_RISCV_REG_X16
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x17 [
 
 	^ UC_RISCV_REG_X17
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x18 [
 
 	^ UC_RISCV_REG_X18
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x19 [
 
 	^ UC_RISCV_REG_X19
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x2 [
 
 	^ UC_RISCV_REG_X2
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x20 [
 
 	^ UC_RISCV_REG_X20
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x21 [
 
 	^ UC_RISCV_REG_X21
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x22 [
 
 	^ UC_RISCV_REG_X22
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x23 [
 
 	^ UC_RISCV_REG_X23
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x24 [
 
 	^ UC_RISCV_REG_X24
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x25 [
 
 	^ UC_RISCV_REG_X25
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x26 [
 
 	^ UC_RISCV_REG_X26
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x27 [
 
 	^ UC_RISCV_REG_X27
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x28 [
 
 	^ UC_RISCV_REG_X28
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x29 [
 
 	^ UC_RISCV_REG_X29
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x3 [
 
 	^ UC_RISCV_REG_X3
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x30 [
 
 	^ UC_RISCV_REG_X30
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x31 [
 
 	^ UC_RISCV_REG_X31
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x4 [
 
 	^ UC_RISCV_REG_X4
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x5 [
 
 	^ UC_RISCV_REG_X5
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x6 [
 
 	^ UC_RISCV_REG_X6
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x7 [
 
 	^ UC_RISCV_REG_X7
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x8 [
 
 	^ UC_RISCV_REG_X8
 ]
 
-{ #category : #register }
+{ #category : 'register' }
 UcRISCVRegisters class >> x9 [
 
 	^ UC_RISCV_REG_X9

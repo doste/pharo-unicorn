@@ -2,15 +2,16 @@
 I represent the Unicorn library, and I'm in charge of fetching it from the disk for further loading.
 "
 Class {
-	#name : #UnicornLibrary,
-	#superclass : #FFILibrary,
+	#name : 'UnicornLibrary',
+	#superclass : 'FFILibrary',
 	#pools : [
 		'UnicornTypes'
 	],
-	#category : #Unicorn
+	#category : 'Unicorn',
+	#package : 'Unicorn'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UnicornLibrary >> knownMacPaths [
 	"Answer a <Collection> of <String> each one representing known libLLVM locations (not necessarily present in the current system"
 	
@@ -22,8 +23,8 @@ UnicornLibrary >> knownMacPaths [
 
 ]
 
-{ #category : #'accessing platform' }
-UnicornLibrary >> macModuleName [
+{ #category : 'accessing - platform' }
+UnicornLibrary >> macLibraryName [
 	"Answer a <String> with the full path to the LibUnicorn library"
 	
 	^ FFIMacLibraryFinder new
@@ -32,8 +33,8 @@ UnicornLibrary >> macModuleName [
 
 ]
 
-{ #category : #'accessing platform' }
-UnicornLibrary >> unixModuleName [
+{ #category : 'accessing - platform' }
+UnicornLibrary >> unixLibraryName [
 
 	^ FFIUnix64LibraryFinder findLibrary: 'libunicorn.so'
 ]

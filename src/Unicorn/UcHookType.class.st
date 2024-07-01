@@ -1,6 +1,6 @@
 Class {
-	#name : #UcHookType,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'UcHookType',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'UC_HOOK_BLOCK',
 		'UC_HOOK_CODE',
@@ -17,10 +17,11 @@ Class {
 		'UC_HOOK_MEM_WRITE_PROT',
 		'UC_HOOK_MEM_WRITE_UNMAPPED'
 	],
-	#category : #Unicorn
+	#category : 'Unicorn',
+	#package : 'Unicorn'
 }
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 UcHookType class >> enumDecl [
 
 	^ #(
@@ -41,38 +42,38 @@ UcHookType class >> enumDecl [
 	)
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcHookType class >> fetchingAccess [
 
 	^ UC_HOOK_MEM_FETCH
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcHookType class >> illegalProtectedMemoryAccess [
 
 	"Hook type for all events of illegal protected memory access"
 	^ UC_HOOK_MEM_READ_PROT + UC_HOOK_MEM_WRITE_PROT + UC_HOOK_MEM_FETCH_PROT
 ]
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 UcHookType class >> initialize [
 	self initializeEnumeration
 ]
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 UcHookType class >> invalidMemoryAccess [
 
 	^ self unmappedMemoryAccess + self illegalProtectedMemoryAccess
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcHookType class >> unmappedMemoryAccess [
 
 	"Hook type for all events of unmapped memory access"
 	^ UC_HOOK_MEM_READ_UNMAPPED + UC_HOOK_MEM_WRITE_UNMAPPED + UC_HOOK_MEM_FETCH_UNMAPPED
 ]
 
-{ #category : #arithmetic }
+{ #category : 'arithmetic' }
 UcHookType >> + aHookType [
 
 	^ self class basicNew

@@ -2,8 +2,8 @@
 I define x86 and x86-64 register constants.
 "
 Class {
-	#name : #UcX86Registers,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'UcX86Registers',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'UC_X86_REG_AH',
 		'UC_X86_REG_AL',
@@ -266,70 +266,71 @@ Class {
 		'UC_X86_REG_ZMM8',
 		'UC_X86_REG_ZMM9'
 	],
-	#category : #Unicorn
+	#category : 'Unicorn',
+	#package : 'Unicorn'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> al [
 
 	^ UC_X86_REG_AL
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> cr4 [
 
 	^ UC_X86_REG_CR4
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> eax [
 
 	^ UC_X86_REG_EAX
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> ebp [
 
 	^ UC_X86_REG_EBP
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> ebx [
 
 	^ UC_X86_REG_EBX
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> ecx [
 	
 	^ UC_X86_REG_ECX
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> edi [
 
 	^ UC_X86_REG_EDI
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> edx [
 	
 	^ UC_X86_REG_EDX
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> eflags [
 
 	^ UC_X86_REG_EFLAGS
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> eip [
 
 	^ UC_X86_REG_EIP
 ]
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 UcX86Registers class >> enumDecl [
 "self initialize to make the changes effective"
 ^ #(
@@ -576,139 +577,139 @@ UcX86Registers class >> enumDecl [
 	)
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> esi [
 
 	^ UC_X86_REG_ESI
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> esp [
 
 	^ UC_X86_REG_ESP
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> fp0 [
 	
 	^ UC_X86_REG_FP0
 ]
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 UcX86Registers class >> initialize [
 	self initializeEnumeration
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> r10 [
 	^ UC_X86_REG_R10
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> r11 [
 	^ UC_X86_REG_R11
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> r12 [
 	^ UC_X86_REG_R12
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> r13 [
 	^ UC_X86_REG_R13
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> r14 [
 	^ UC_X86_REG_R14
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> r15 [
 	^ UC_X86_REG_R15
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> r8 [
 	^ UC_X86_REG_R8
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> r9 [
 	^ UC_X86_REG_R9
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> r9b [
 	
 	^ UC_X86_REG_R9B
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> rax [
 	^ UC_X86_REG_RAX
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> rbp [
 	^ UC_X86_REG_RBP
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> rbx [
 	^ UC_X86_REG_RBX
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> rcx [
 	^ UC_X86_REG_RCX
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> rdi [
 	^ UC_X86_REG_RDI
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> rdx [
 	^ UC_X86_REG_RDX
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> rflags [
 
 	^ UC_X86_REG_EFLAGS
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> rip [
 	^ UC_X86_REG_RIP
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> rsi [
 	^ UC_X86_REG_RSI
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcX86Registers class >> rsp [
 	^ UC_X86_REG_RSP
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> xmm0 [
 
 	^ UC_X86_REG_XMM0
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> xmm1 [
 
 	^ UC_X86_REG_XMM1
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcX86Registers class >> xmm2 [
 	
 	^ UC_X86_REG_XMM2

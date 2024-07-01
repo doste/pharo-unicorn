@@ -1,6 +1,6 @@
 Class {
-	#name : #UcARM64Registers,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'UcARM64Registers',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'UC_ARM64_REG_B0',
 		'UC_ARM64_REG_B1',
@@ -294,28 +294,29 @@ Class {
 		'UC_ARM64_REG_X9',
 		'UC_ARM64_REG_XZR'
 	],
-	#category : #Unicorn
+	#category : 'Unicorn',
+	#package : 'Unicorn'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> cpacr_el1 [
 	
 	^ UC_ARM64_REG_CPACR_EL1
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcARM64Registers class >> d0 [
 	
 	^ UC_ARM64_REG_D0
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcARM64Registers class >> d1 [
 	
 	^ UC_ARM64_REG_D1
 ]
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 UcARM64Registers class >> enumDecl [
 "self initialize to make the changes effective"
 	^ #(
@@ -612,251 +613,251 @@ UcARM64Registers class >> enumDecl [
 	#UC_ARM64_REG_ENDING 290)
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> fp [
 	"This is an alias to X29"
 	^ UC_ARM64_REG_X29
 ]
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 UcARM64Registers class >> initialize [
 
 	self initializeEnumeration
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> lr [
 	"This is an alias to X30"
 	^ UC_ARM64_REG_X30
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> nzcv [
 	
 	^ UC_ARM64_REG_NZCV
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> pc [
 	
 	^ UC_ARM64_REG_PC
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> sp [
 	^ UC_ARM64_REG_SP
 ]
 
-{ #category : #constants }
+{ #category : 'constants' }
 UcARM64Registers class >> v0 [
 	
 	^ UC_ARM64_REG_V0
 ]
 
-{ #category : #constants }
+{ #category : 'constants' }
 UcARM64Registers class >> v1 [
 	
 	^ UC_ARM64_REG_V1
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> v2 [
 	
 	^ UC_ARM64_REG_V2
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcARM64Registers class >> w25 [
 	
 	^ UC_ARM64_REG_W25
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcARM64Registers class >> w6 [
 	
 	^ UC_ARM64_REG_W6
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x0 [
 	
 	^ UC_ARM64_REG_X0
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x1 [
 	
 	^ UC_ARM64_REG_X1
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x10 [
 	
 	^ UC_ARM64_REG_X10
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x11 [
 	
 	^ UC_ARM64_REG_X11
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x12 [
 	
 	^ UC_ARM64_REG_X12
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcARM64Registers class >> x13 [
 	^ UC_ARM64_REG_X13 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcARM64Registers class >> x14 [
 	^ UC_ARM64_REG_X14
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcARM64Registers class >> x15 [
 	^ UC_ARM64_REG_X15
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcARM64Registers class >> x16 [
 	^ UC_ARM64_REG_X16
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcARM64Registers class >> x17 [
 	^ UC_ARM64_REG_X17
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcARM64Registers class >> x18 [
 	^ UC_ARM64_REG_X18
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 UcARM64Registers class >> x19 [
 	^ UC_ARM64_REG_X19
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x2 [
 	
 	^ UC_ARM64_REG_X2
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x20 [
 
 	^ UC_ARM64_REG_X20
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x21 [
 	
 	^ UC_ARM64_REG_X21
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x22 [
 
 	^ UC_ARM64_REG_X22
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x23 [
 
 	^ UC_ARM64_REG_X23
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x24 [
 
 	^ UC_ARM64_REG_X24
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x25 [
 
 	^ UC_ARM64_REG_X25
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x26 [
 
 	^ UC_ARM64_REG_X26
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x27 [
 
 	^ UC_ARM64_REG_X27
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x28 [
 
 	^ UC_ARM64_REG_X28
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x29 [
 
 	^ UC_ARM64_REG_X29
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x3 [
 	
 	^ UC_ARM64_REG_X3
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x30 [
 
 	^ UC_ARM64_REG_X30
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x4 [
 	
 	^ UC_ARM64_REG_X4
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x5 [
 	
 	^ UC_ARM64_REG_X5
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x6 [
 	
 	^ UC_ARM64_REG_X6
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x7 [
 	
 	^ UC_ARM64_REG_X7
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x8 [
 	
 	^ UC_ARM64_REG_X8
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> x9 [
 	
 	^ UC_ARM64_REG_X9
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UcARM64Registers class >> xzr [
 	
 	^ UC_ARM64_REG_XZR

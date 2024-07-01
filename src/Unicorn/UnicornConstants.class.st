@@ -2,8 +2,8 @@
 I define constants required for initializing and configuring an engine.
 "
 Class {
-	#name : #UnicornConstants,
-	#superclass : #SharedPool,
+	#name : 'UnicornConstants',
+	#superclass : 'SharedPool',
 	#classVars : [
 		'UC_ARCH_ARM',
 		'UC_ARCH_ARM64',
@@ -72,10 +72,11 @@ Class {
 	#pools : [
 		'UnicornTypes'
 	],
-	#category : #Unicorn
+	#category : 'Unicorn',
+	#package : 'Unicorn'
 }
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 UnicornConstants class >> initialize [
 
 	"Supported architectures"
@@ -172,37 +173,37 @@ UnicornConstants class >> initialize [
 	UC_CPU_X86_KNIGHTSMILL := 29.
 ]
 
-{ #category : #api }
+{ #category : 'api' }
 UnicornConstants class >> isOk: anInteger [ 
 
 	^ anInteger = UC_ERR_OK
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UnicornConstants class >> permissionAll [
 
 	^ UC_PROT_ALL
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UnicornConstants class >> permissionExecute [
 
 	^ UC_PROT_EXEC
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UnicornConstants class >> permissionNone [
 
 	^ UC_PROT_NONE
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UnicornConstants class >> permissionRead [
 
 	^ UC_PROT_READ
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 UnicornConstants class >> permissionWrite [
 
 	^ UC_PROT_WRITE
